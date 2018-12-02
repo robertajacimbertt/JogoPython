@@ -1,11 +1,11 @@
-pergunta,resposta_1,resposta_2,resposta_3
-O que é java?,a) Jogo online,b) Linguagem de programação –,c) Linguagem de marcação de texto
-O que é um software?,a)	É de chutar,b) Conjunto de programas -,c) Super- vilão
-O que é HTML?,a) Linguagem de marcação-,b) Linguagem de programação,c) Órgão governamental
-O que é hardware?,a) De ofender,b) Parte física do computador-,c) Uma porcelana difícil
-Qual das seguintes variáveis aceita números inteiros?,a) Boolean,b) String,c) Int-
-O que é Assembly?,a) Linguagem de programação,b) Biblioteca Java,c) Componente de hardware
-p7,R7,R17,R27
-P8,R8,R18,R28
-p9,R9,R19,R29
-p10,R10,R20,R30
+pergunta;resposta_1;resposta_2;resposta_3;resposta_correta;id
+O que é java?;a) Jogo online;b) Linguagem de programação –;c) Linguagem de marcação de texto;2;0
+O que é um software?;a) É de chutar;b) Conjunto de programas -;c) Super vilão;2;1
+O que é HTML?;a) Linguagem de marcação-;b) Linguagem de programação;c) Órgão governamental;1;2
+O que é hardware?;a) De ofender;b) Parte física do computador;c) Uma porcelana difícil;2;3
+Qual das seguintes variáveis aceita números inteiros?;a) Boolean;b) String;c) Int;3;4
+O que é Assembly?;a) Linguagem de programação;b) Biblioteca Java;c) Componente de hardware;1;5
+p7;R7;R17;R27;1;6
+P8;R8;R18;R28;1;7
+p9;R9;R19;R29;1;8
+p10;R10;R20;R30;1;9

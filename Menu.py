@@ -5,10 +5,8 @@ try:
 except:
     from tkinter import *
 
-from Dialog import Dialog
-import pandas as pd
 import csv
-import GameInit
+import quiz
 
 class Menu:    
     def __init__(self, master):
@@ -37,13 +35,18 @@ class Menu:
         print("Init Game!")
         user_name=self.entry_name.get()
         if user_name: 
-            print("Olá ", user_name)
+            print("Ola ", user_name)
             game_init_window=Tk()
-            GameInit.GameInit(game_init_window)
+            quiz.Quiz(game_init_window)
             game_init_window.mainloop()
         else:
             print("Usuario não digitou o nome")
             self.label_erro['text'] = 'Digite seu nome ou apelido'
+
+    # def getName():
+    #     return self.entry_name.get()
+
+    linha_selecionada = []
 
     def open_ranking(self):
         print("Ranking!")
@@ -51,21 +54,22 @@ class Menu:
         # pergunta_completa = base[['pergunta']].values
         # print(pergunta_completa)
         base = open('perguntas_faceis.csv', 'r')
-        linha_selecionada = []
         try:
-            leitor = csv.reader(base)
+            leitor = csv.reader(base, delimiter=';')
+            next(leitor)
             i = 0
             ramdom_number = 3
             for linha in leitor:
-                # print(i, linha)
+                print(linha)
                 if( i == ramdom_number ):
                     linha_selecionada = linha
                 i = i+1
         finally:
             base.close()
-            print("Linha escolhida --> ", linha_selecionada)
             self.label_erro['text'] = linha_selecionada[0]
+        # print("Linha escolhida --> ", linha_selecionada[0])
 
+    
 root = Tk()
 my_gui = Menu(root)
 root.mainloop()
