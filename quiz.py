@@ -14,7 +14,6 @@ numero = 0
 class Quiz:
     score = 0
     quantidade_de_perguntas_respondidas = 0
-    perguntas_passadas = []
 
     perguntaSorteada = [] 
 
@@ -47,7 +46,7 @@ class Quiz:
         try:
             leitor = csv.reader(base, delimiter=';')
             i = 0
-            ramdom_number = randint(0,9)
+            ramdom_number = randint(1,9)
             for linha in leitor:                
                 if( i == ramdom_number ):
                     return linha
@@ -58,17 +57,33 @@ class Quiz:
     def conferirResposta(self, pergunta_sorteada, resposta):
         print(pergunta_sorteada[4])
         indice_resposta_certa = int(pergunta_sorteada[4])
+        print("Indice da resposta certa ", pergunta_sorteada[indice_resposta_certa])
         if(pergunta_sorteada[indice_resposta_certa] == resposta):
             self.score += 10
             self.quantidade_de_perguntas_respondidas += 1
-            print("voce ganhou")
-            success_window=Tk()
-            success.Success(success_window)
-            success_window.mainloop()
-            # sortearPergunta()
+            print("voce ganhou", self.quantidade_de_perguntas_respondidas)
+            if(self.quantidade_de_perguntas_respondidas >= 5):
+                # abrir a tela de historia do proximo nivel
+                print("oi")
+                self.master.destroy()
+            else:
+                new_line = self.sortearPergunta() 
+                self.updateQuestion(new_line)
+                success_window=Tk()
+                success.Success(success_window)
+                success_window.mainloop()
         else:
-            print("voce perdeu")
+            print("Voce perdeu, sorry")
             # teste.config("Voce perdeu, sorry")
+
+    def updateQuestion (self, linha):
+        self.label['text'] = linha[0]
+        self.answer1['command'] = lambda: self.conferirResposta(linha, linha[1])
+        self.answer1['text'] = linha[1]
+        self.answer2['command'] = lambda: self.conferirResposta(linha, linha[2])
+        self.answer2['text'] = linha[2]
+        self.answer3['command'] = lambda: self.conferirResposta(linha, linha[3])
+        self.answer3['text'] = linha[3]
 
 # root = Tk()
 # my_gui = Quiz(root)
