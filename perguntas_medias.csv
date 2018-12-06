@@ -1,11 +1,11 @@
-pergunta;resposta_1;resposta_2;resposta_3
-Qual a diferença entre RAM e ROM?;a) RAM é volátil, ROM é não volátil -;b) RAM armazena mais memória;c) RAM não é volátil, ROM é volátil
-Qual alternativa apresenta uma estrutura de dados LIFO (último a entrar primeiro a sair)?;a) Árvore;b) Vetor;c) Pilha –
-Na linguagem de programação Java o que o comando “for” faz?;a) Apresenta texto ao usuário;b) Um laço de repetição-;c) Lê entrada do usuário
-Qual o nome do primeiro computador?;a) Eniac -;b) Mark 1;c) Escanor
-O que é criptografia?;a) Padrão de projeto;b) Conjunto de princípios e técnicas para cifrar-;c) Linguagem de programação
-Qual das linguagens de programação é estruturada?;a) Java;b) C#;c) C –
-O que é hierarquia?;a) Modo de uma classe herdar atributos e métodos de outra classe -;b) Padrão de projeto para diminuir o acoplamento;c) Biblioteca Python para gerar gráficos
-P8;R8;R18;R28
-p9;R9;R19;R29
-p10;R10;R20;R30
+pergunta;resposta_1;resposta_2;resposta_3;resposta_correta
+Qual a diferença entre RAM e ROM?;a) RAM é volátil, ROM é não volátil -;b) RAM armazena mais memória;c) RAM não é volátil, ROM é volátil;1
+Qual alternativa apresenta uma estrutura de dados LIFO (último a entrar primeiro a sair)?;a) Árvore;b) Vetor;c) Pilha –;3
+Na linguagem de programação Java o que o comando “for” faz?;a) Apresenta texto ao usuário;b) Um laço de repetição-;c) Lê entrada do usuário;2
+Qual o nome do primeiro computador?;a) Eniac -;b) Mark 1;c) Escanor;1
+O que é criptografia?;a) Padrão de projeto;b) Conjunto de princípios e técnicas para cifrar-;c) Linguagem de programação;2
+Qual das linguagens de programação é estruturada?;a) Java;b) C#;c) C –;3
+O que é hierarquia?;a) Modo de uma classe herdar atributos e métodos de outra classe -;b) Padrão de projeto para diminuir o acoplamento;c) Biblioteca Python para gerar gráficos;1
+P8;R8;R18;R28;1
+p9;R9;R19;R29;1
+p10;R10;R20;R30;1

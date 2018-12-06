@@ -6,7 +6,7 @@ except:
     from tkinter import *
 
 import csv
-import quiz
+import historia_zero
 
 class Menu:    
     def __init__(self, master):
@@ -36,9 +36,9 @@ class Menu:
         user_name=self.entry_name.get()
         if user_name: 
             print("Ola ", user_name)
-            game_init_window=Tk()
-            quiz.Quiz(game_init_window)
-            game_init_window.mainloop()
+            historia_primeira_parte=Tk()
+            historia_zero.Historia(historia_primeira_parte)
+            historia_primeira_parte.mainloop()
         else:
             print("Usuario não digitou o nome")
             self.label_erro['text'] = 'Digite seu nome ou apelido'
