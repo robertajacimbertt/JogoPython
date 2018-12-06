@@ -1,0 +1,11 @@
+pergunta;resposta_1;resposta_2;resposta_3;resposta_correta
+Qual protocolo é responsável pelo controle dinâmico de números IP’s?;DNS;IP;DHCP;3
+Responsável pelo filtro de pacotes, regulando o tráfego de dados que entram e saem da rede.;Firewall;IDS;IPS;1
+Programa que executa propagandas e coleta dados pessoais sem autorização:;Worm;Adware;Pharming;2
+Qual item contém apenas distribuições Linux?;Kurumin, KDE, Konquerorb;Ubuntu, Safari, Posixc;Red Hat, Ubuntu, Turbo Linux;3
+Qual é o ambiente gráfico do Linux?;KDE;Suse;Kernel;1
+O que é HTTP?;É um protocolo de segurança para acesso de servidor;Protocolo para transferência de XML;Protocolo de transferência de Hipertexto;3
+Qual a diferença entre HTTP e HTTPS?;HTTP é mais seguro; HTTPS é mais seguro;Eles são iguais;2
+O que é FTP?;Protocolo para transferir arquivos;Protocolo para chamada de voz;Protocolo de proteção de firewall;1
+O que é maven?;Linguagem de programação;Biblioteca para parse de XML;Ferramenta para automação de compilação;3
+O que é parsing?;Determinação de uma sequência de entrada para uma estrutura pré-determinada;Método que realiza apenas a leitura de um arquivo muito grande;É um tipo de estrutura de dados, muito semelhante a pilha;1
