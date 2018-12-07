@@ -23,3 +23,4 @@ class Success:
         # self.label['text'] = 'Digite seu nome ou apelido aquie'
         print("Proxima pergunta!")
         master.destroy()
+        master.quit()

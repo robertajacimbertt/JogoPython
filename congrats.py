@@ -5,8 +5,6 @@ try:
 except:
     from tkinter import *
 
-import Menu
-
 class Congrats:
     def __init__(self, master):
         self.master = master
@@ -15,13 +13,15 @@ class Congrats:
         self.label = Label(master, text="Parabens!")
         self.label.pack()
 
-        self.greet_button = Button(master, text="Próximo", command=self.next)
+        self.greet_button = Button(master, text="Próximo", command= lambda: self.next(master))
         self.greet_button.pack()
 
         # self.close_button = Button(master, text="Close", command=master.quit)
         # self.close_button.pack()
 
-    def next(self):
+    def next(self, master):
+        master.destroy()
+        import Menu
         menu_tela=Tk()
         Menu.Menu(menu_tela)
         menu_tela.mainloop()

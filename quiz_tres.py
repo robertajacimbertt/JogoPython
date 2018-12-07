@@ -5,11 +5,6 @@ try:
 except:
     from tkinter import *
 
-from random import randint
-import csv
-import success
-import historia_tres
-
 numero = 0
 
 class Quiz:
@@ -43,8 +38,10 @@ class Quiz:
         # self.close_button.pack()
 
     def sortearPergunta(self):
+        import csv
         base = open('perguntas_dificeis.csv', 'r')
         try:
+            from random import randint
             leitor = csv.reader(base, delimiter=';')
             i = 0
             ramdom_number = randint(1,9)
@@ -66,18 +63,23 @@ class Quiz:
             if(self.quantidade_de_perguntas_respondidas >= 5):
                 # abrir a tela de historia do proximo nivel
                 self.master.destroy()
+                import historia_tres
                 historia_tres_tela=Tk()
                 historia_tres.Historia(historia_tres_tela)
                 historia_tres_tela.mainloop()
+                return
             else:
                 new_line = self.sortearPergunta() 
                 self.updateQuestion(new_line)
+                import success
                 success_window=Tk()
                 success.Success(success_window)
                 success_window.mainloop()
+                return
         else:
             print("Voce perdeu, sorry")
             # teste.config("Voce perdeu, sorry")
+            return
 
     def updateQuestion (self, linha):
         self.label['text'] = linha[0]
@@ -87,6 +89,7 @@ class Quiz:
         self.answer2['text'] = linha[2]
         self.answer3['command'] = lambda: self.conferirResposta(linha, linha[3])
         self.answer3['text'] = linha[3]
+        return
 
 # root = Tk()
 # my_gui = Quiz(root)
