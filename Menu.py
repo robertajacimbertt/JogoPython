@@ -9,6 +9,12 @@ class Menu:
     def __init__(self, master):
         self.master = master
         master.title("Bem vindo ao Quiz")
+        w = master.winfo_screenwidth()
+        h = master.winfo_screenheight()
+        size = tuple(int(pos) for pos in master.geometry().split('+')[0].split('x'))
+        x = w/2 - size[0]/2
+        y = h/2 - size[1]/2
+        master.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
         self.label = Label(master, text="Pronto? Então digite o seu nome para começar!")
         self.label.pack()
@@ -33,8 +39,10 @@ class Menu:
             historia_primeira_parte=Tk()
             historia_zero.Historia(historia_primeira_parte)
             historia_primeira_parte.mainloop()
+            return True
         else:
             self.label_erro['text'] = 'Digite seu nome ou apelido'
+            return False
     
 root = Tk()
 my_gui = Menu(root)

@@ -25,6 +25,7 @@ class Congrats:
         menu_tela=Tk()
         Menu.Menu(menu_tela)
         menu_tela.mainloop()
+        return True
 
 # root = Tk()
 # my_gui = GameInit(root)

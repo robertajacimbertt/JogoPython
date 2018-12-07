@@ -25,6 +25,7 @@ class Historia:
         jogo_tres=Tk()
         quiz_tres.Quiz(jogo_tres)
         jogo_tres.mainloop()
+        return True
 
 # root = Tk()
 # my_gui = GameInit(root)

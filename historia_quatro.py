@@ -25,6 +25,7 @@ class Historia:
         final=Tk()
         congrats.Congrats(final)
         final.mainloop()
+        return True
 
 # root = Tk()
 # my_gui = GameInit(root)

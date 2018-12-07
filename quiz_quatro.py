@@ -67,7 +67,7 @@ class Quiz:
                 historia_quatro_tela=Tk()
                 historia_quatro.Historia(historia_quatro_tela)
                 historia_quatro_tela.mainloop()
-                return
+                return True
             else:
                 new_line = self.sortearPergunta() 
                 self.updateQuestion(new_line)
@@ -75,11 +75,11 @@ class Quiz:
                 success_window=Tk()
                 success.Success(success_window)
                 success_window.mainloop()
-                return
+                return False
         else:
             print("Voce perdeu, sorry")
             # teste.config("Voce perdeu, sorry")
-            return
+            return False
 
     def updateQuestion (self, linha):
         self.label['text'] = linha[0]
@@ -89,7 +89,7 @@ class Quiz:
         self.answer2['text'] = linha[2]
         self.answer3['command'] = lambda: self.conferirResposta(linha, linha[3])
         self.answer3['text'] = linha[3]
-        return
+        return True
 
 # root = Tk()
 # my_gui = Quiz(root)
